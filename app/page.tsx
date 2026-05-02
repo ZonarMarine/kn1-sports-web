@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 /* ─── TOKENS ─────────────────────────────────────────────────────────────── */
 
@@ -503,37 +503,72 @@ function RiderCard({ rider, img }: { rider: typeof RIDERS[0]; img: string }) {
 
 /* ─── STATS ──────────────────────────────────────────────────────────────── */
 
-function Stats() {
+function useCountUp(target: number, duration = 1800, triggered: boolean) {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!triggered) return;
+    let start: number | null = null;
+    const step = (ts: number) => {
+      if (!start) start = ts;
+      const progress = Math.min((ts - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(ease * target));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, [triggered, target, duration]);
+  return count;
+}
+
+function StatItem({ s, index, triggered }: { s: typeof STATS[0]; index: number; triggered: boolean }) {
+  const num = parseInt(s.n.replace(/\D/g, ""), 10);
+  const suffix = s.n.replace(/[0-9]/g, "");
+  const count = useCountUp(num, 1800, triggered);
   return (
-    <section style={{ background: C.bg }}>
+    <div style={{ padding: "80px 40px", borderLeft: index > 0 ? `1px solid ${C.border}` : "none" }}>
+      <div style={{
+        fontFamily: F.display,
+        fontSize: "clamp(80px, 10vw, 128px)",
+        lineHeight: 0.88,
+        letterSpacing: "0.02em",
+        color: C.white,
+        marginBottom: 20,
+      }}>
+        {triggered ? `${count}${suffix}` : s.n}
+      </div>
+      <div style={{
+        fontFamily: F.body, fontSize: 11,
+        lineHeight: 1.65, color: C.gray,
+        letterSpacing: "0.04em",
+        whiteSpace: "pre-line",
+      }}>
+        {s.label}
+      </div>
+    </div>
+  );
+}
+
+function Stats() {
+  const [triggered, setTriggered] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setTriggered(true); observer.disconnect(); } },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section ref={ref} style={{ background: C.bg }}>
       <Divider />
       <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 48px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }} className="sg">
-          {STATS.map((s, i) => (
-            <div key={i} style={{
-              padding: "80px 40px",
-              borderLeft: i > 0 ? `1px solid ${C.border}` : "none",
-            }}>
-              <div style={{
-                fontFamily: F.display,
-                fontSize: "clamp(80px, 10vw, 128px)",
-                lineHeight: 0.88,
-                letterSpacing: "0.02em",
-                color: C.white,
-                marginBottom: 20,
-              }}>
-                {s.n}
-              </div>
-              <div style={{
-                fontFamily: F.body, fontSize: 11,
-                lineHeight: 1.65, color: C.gray,
-                letterSpacing: "0.04em",
-                whiteSpace: "pre-line",
-              }}>
-                {s.label}
-              </div>
-            </div>
-          ))}
+          {STATS.map((s, i) => <StatItem key={i} s={s} index={i} triggered={triggered} />)}
         </div>
       </div>
       <Divider />
