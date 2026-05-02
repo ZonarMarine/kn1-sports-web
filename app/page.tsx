@@ -227,10 +227,15 @@ function Navbar() {
   );
 }
 
+const NAV_HREFS: Record<string, string> = {
+  "Media": "/media",
+};
+
 function NavItem({ label }: { label: string }) {
   const [hov, setHov] = useState(false);
+  const href = NAV_HREFS[label] ?? `#${label.toLowerCase()}`;
   return (
-    <a href={`#${label.toLowerCase()}`}
+    <a href={href}
       onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
       style={{
         fontFamily: F.body, fontSize: 10, fontWeight: 700,
