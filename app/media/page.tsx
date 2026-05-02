@@ -21,46 +21,58 @@ const F = {
 
 const ARTICLES = [
   {
-    tag: "Entrenamiento",
-    title: "KN1 Sports inicia temporada con intensos entrenamientos",
-    excerpt: "El equipo se prepara para la temporada con sesiones diarias en La Orozca, enfocados en mejorar tiempos y técnica.",
-    img: "/entrenamientos.jpg",
-    date: "Abril 2024",
+    tag: "Equipo",
+    title: "Keylor Navas presenta su equipo de motocross KN1",
+    excerpt: "El proyecto incorporó dos fichajes para la temporada 2026. Keylor Navas presentó oficialmente su equipo de motocross KN1, reforzado con nuevos pilotos para competir en la próxima temporada.",
+    img: "https://static3.teletica.com/Files/Sizes/2026/3/7/keylor-navas-presenta-su-equipo-de-motocross.-foto-melissa-alvar_1461932267_760x520.jpg",
+    date: "7 Marzo 2026",
+    href: "https://www.teletica.com/otros-deportes/keylor-navas-presenta-su-equipo-de-motocross-kn1_403615",
+    source: "Teletica",
   },
   {
-    tag: "Carrera",
-    title: "Campeonato Nacional de Motocross: KN1 Sports listo para competir",
-    excerpt: "Nuestros riders estarán presentes en todas las categorías del próximo Campeonato Nacional a celebrarse en Alajuela.",
-    img: "/campeonato-nacional.jpg",
-    date: "Mayo 2024",
+    tag: "Entrevista",
+    title: "¿Ya sabe Keylor Navas qué hará cuando se retire del fútbol?",
+    excerpt: "Le preguntamos directamente a Keylor Navas sobre sus planes una vez que cuelgue los guantes. El portero costarricense reveló que el motocross y su equipo KN1 forman parte de su visión para el retiro.",
+    img: "https://www.lateja.cr/resizer/v2/E5XWJHCIP5DIZCTSJWTJ4OD2SU.JPG?smart=true&auth=2b61b08295c97c43c501b0ac339c152ab2ca7584eb8d9b9d9fe4ebd86b26e040&width=1440",
+    date: "7 Marzo 2026",
+    href: "https://www.lateja.cr/deportes/ya-sabe-keylor-navas-que-hara-cuando-se-retire-del/QFBAY3Z2DFGHHKSZHQAME5DU6Q/story/",
+    source: "La Teja",
   },
   {
-    tag: "Detrás de cámaras",
-    title: "Un día con el equipo KN1 Sports",
-    excerpt: "Acompañamos al equipo durante una jornada completa de preparación, desde el amanecer hasta el último salto del día.",
-    img: "/detras-de-camaras.jpg",
-    date: "Marzo 2024",
-  },
-  {
-    tag: "Carrera",
-    title: "Resultados de la primera fecha del campeonato",
-    excerpt: "El equipo KN1 Sports suma puntos importantes en la primera fecha de la temporada con podios en múltiples categorías.",
-    img: "/carreras.jpg",
-    date: "Febrero 2024",
+    tag: "Evento",
+    title: "Keylor Navas anuncia que realizará un evento de motocross",
+    excerpt: "El evento se llamará KN1 Motocross y será en San Mateo de Alajuela. Keylor Navas anunció este evento como parte de su proyecto para promover el motocross en Costa Rica.",
+    img: "https://static3.teletica.com/Files/Sizes/2024/7/29/keylor-navas_1425660983_760x520.jpg",
+    date: "24 Noviembre 2024",
+    href: "https://www.teletica.com/motores/keylor-navas-anuncia-que-realizara-un-evento-de-motocross_371704",
+    source: "Teletica",
   },
   {
     tag: "Equipo",
-    title: "Keylor Navas y la visión detrás de KN1 Sports",
-    excerpt: "El portero costarricense explica su motivación para crear un equipo de motocross de alto nivel en Costa Rica.",
-    img: "/keylor-navas.jpg",
-    date: "Enero 2024",
+    title: "Este es el equipo KN1 que Keylor Navas está puliendo para competir",
+    excerpt: "Keylor Navas dio a conocer los valores que está promoviendo en el equipo. El guardameta costarricense trabaja en consolidar su escuadra de motocross KN1 con jóvenes talentos nacionales.",
+    img: "https://www.lateja.cr/resizer/v2/XTMBVEHIXVETJFIOGRIK37FC5Y.JPG?smart=true&auth=deff4d62af18e8ec8ed78d463443e91adedf041f62735f7c20a573beda6d5269&width=1440",
+    date: "8 Marzo 2026",
+    href: "https://www.lateja.cr/deportes/este-es-el-equipo-kn1-que-keylor-navas-esta/Y4YZHQ5NSVANLPQYEPBS6LUYQQ/story/",
+    source: "La Teja",
   },
   {
-    tag: "Entrenamiento",
-    title: "Los riders más jóvenes de KN1 muestran su talento",
-    excerpt: "Las categorías 50CC y 65CC siguen creciendo, con nuevos talentos que prometen brillar en la próxima temporada.",
-    img: "/kn1-sports.jpg",
-    date: "Enero 2024",
+    tag: "Cobertura",
+    title: "Keylor Navas invierte en motocross y apuesta por jóvenes talentos ticos",
+    excerpt: "El arquero tico presentó su equipo de motocross KN1, una iniciativa para impulsar jóvenes que también refleja una inversión personal de tiempo, dinero y valores familiares.",
+    img: "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0308%2Fr1624946_1296x729_16%2D9.jpg",
+    date: "7 Marzo 2026",
+    href: "https://www.espn.com.mx/futbol/costa-rica/nota/_/id/16404440/keylor-navas-equipo-motocross-kn1-costa-rica",
+    source: "ESPN",
+  },
+  {
+    tag: "Academia",
+    title: "Keylor Navas le abre la puerta del motocross a niños y jóvenes con KN1",
+    excerpt: "A través del equipo KN1, Keylor Navas busca darle oportunidades a niños y jóvenes costarricenses para desarrollarse en el deporte del motocross.",
+    img: "https://observador.cr/wp-content/uploads/2025/03/KN1MOTOCROSS1-930x450.jpeg",
+    date: "21 Marzo 2025",
+    href: "https://observador.cr/keylor-navas-le-abre-la-puerta-del-motocross-a-ninos-y-jovenes-con-su-equipo-kn1/",
+    source: "Observador",
   },
 ];
 
@@ -94,10 +106,13 @@ function SocialIcon({ children, href = "#" }: { children: React.ReactNode; href?
 function ArticleCard({ article }: { article: typeof ARTICLES[0] }) {
   const [hov, setHov] = useState(false);
   return (
-    <div
+    <a
+      href={article.href}
+      target="_blank"
+      rel="noopener noreferrer"
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
-      style={{ cursor: "pointer", background: C.bgCard, border: `1px solid ${hov ? "rgba(59,130,246,0.25)" : C.border}`, transition: "border-color 0.3s", overflow: "hidden" }}
+      style={{ cursor: "pointer", background: C.bgCard, border: `1px solid ${hov ? "rgba(59,130,246,0.25)" : C.border}`, transition: "border-color 0.3s", overflow: "hidden", textDecoration: "none", display: "block" }}
     >
       {/* Image */}
       <div style={{ position: "relative", aspectRatio: "16/9", overflow: "hidden" }}>
@@ -109,9 +124,12 @@ function ArticleCard({ article }: { article: typeof ARTICLES[0] }) {
           transition: "transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
         }} />
         <div style={{ position: "absolute", inset: 0, background: hov ? "rgba(11,11,11,0.2)" : "rgba(11,11,11,0.4)", transition: "background 0.3s" }} />
-        <div style={{ position: "absolute", top: 16, left: 16 }}>
+        <div style={{ position: "absolute", top: 16, left: 16, display: "flex", gap: 8, alignItems: "center" }}>
           <span style={{ fontFamily: F.body, fontSize: 8, fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase", color: C.blue }}>
             {article.tag}
+          </span>
+          <span style={{ fontFamily: F.body, fontSize: 8, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", borderLeft: "1px solid rgba(255,255,255,0.15)", paddingLeft: 8 }}>
+            {article.source}
           </span>
         </div>
       </div>
@@ -134,7 +152,7 @@ function ArticleCard({ article }: { article: typeof ARTICLES[0] }) {
           </span>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
